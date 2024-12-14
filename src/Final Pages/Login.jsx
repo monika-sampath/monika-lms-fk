@@ -22,11 +22,17 @@ const Login = () => {
     try {
       const response = await loginUser(formData); // Call API to log in
       // Assuming the response contains the token
-      const { token } = response.data;
+      const { token, user } = response.data;
       if (token) {
         localStorage.setItem("token", token); // Store the token in localStorage
         alert("Login successful!");
-        navigate("/studentDashboard"); // Redirect to Dashboard after successful login
+        console.log({ token, user });
+        if (user.role == "student") {
+          navigate("/studentDashboard");
+        } else {
+          navigate("/tutorDashboard");
+        }
+        // Redirect to Dashboard after successful login
       }
     } catch (error) {
       console.error("Error logging in:", error);
@@ -40,7 +46,7 @@ const Login = () => {
         <div className="h-full w-1/2  flex justify-around ">
           <img
             className="w-3/5"
-            src="./public/Login Page/11683784_4795438.svg"
+            src="/Login Page/11683784_4795438.svg"
             alt=""
           />
         </div>

@@ -33,7 +33,7 @@ const Home = () => {
         <div className=" h-96 rounded-lg w-1/2">
           <img
             className="w-full "
-            src="./public/Home/10613101_10088.svg"
+            src="/Home/10613101_10088.svg"
             alt=""
           />
           <p className="relative bottom-9 pl-14 text-5xl font-semibold">

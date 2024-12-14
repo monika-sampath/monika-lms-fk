@@ -1,15 +1,19 @@
 import React, { useState } from "react";
 import { registerUser } from "../services/api";
+import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Register = () => {
+  const navigate = useNavigate();
   const [form, setForm] = useState({
-    name: "",
+    username: "",
     email: "",
     password: "",
     role: "student",
   });
-  const handleChange = (e) =>
+  const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
+  };
   // const handleChange = (e) => {
   //   setFormData({
   //     ...formData,
@@ -21,7 +25,9 @@ const Register = () => {
     e.preventDefault();
     try {
       const response = await registerUser(form);
+      alert("Register successful!");
       console.log("User registered successfully:", response);
+      navigate("/login");
       // Handle successful registration (e.g., navigate or show a success message)
     } catch (error) {
       console.error("Registration failed:", error);
@@ -48,7 +54,7 @@ const Register = () => {
         <h2 className="text-2xl font-bold mb-4">Register</h2>
         <input
           type="text"
-          name="name"
+          name="username"
           placeholder="Name"
           onChange={handleChange}
           className="border p-2 w-full mb-4 rounded-lg"
