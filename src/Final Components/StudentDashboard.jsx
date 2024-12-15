@@ -1,6 +1,11 @@
 import React from "react";
+import { useEffect, useState } from "react";
+import { profileDetail } from "../services/api";
+import { useLocation } from "react-router-dom";
 
 function StudentDashboard() {
+  const location = useLocation();
+  const { userId } = location.state || {}; // Retrieve userId passed via state
   return (
     <>
       {/* <nav className="h-16 bg-gray-50 shadow-lg rounded-lg flex flex-row justify-between px-20 mb-10">
@@ -12,7 +17,7 @@ function StudentDashboard() {
         </button>
       </nav> */}
 
-        {/* <div className="bg-white w-1/6 rounded-l-lg flex flex-col items-start pl-9 pt-10 gap-6">
+      {/* <div className="bg-white w-1/6 rounded-l-lg flex flex-col items-start pl-9 pt-10 gap-6">
           <button className="text-xl tracking-wider flex flex-row gap-2 hover:text-green-500">
             <img
               className="w-8"
@@ -54,20 +59,26 @@ function StudentDashboard() {
             Certificates
           </button>
         </div> */}
-        <div className="bg-blue-50 w-5/6 h-screen rounded-r-lg flex flex-col justify-evenly px-14">
-          <div className="flex flex-row gap-3 ">
-            <div className="h-72 w-1/4 bg-white rounded-2xl shadow-lg shadow-gray-200">
-              my profile
-            </div>
-            <div className="h-72 w-3/4 bg-white rounded-2xl shadow-lg shadow-gray-200">
-              side bar
-            </div>
+      <div className="bg-blue-50 w-5/6 h-screen rounded-r-lg flex flex-col justify-evenly px-14">
+        <div className="flex flex-row gap-3 ">
+          <div className="h-72 w-1/5 bg-white rounded-2xl shadow-lg shadow-gray-200 justify-items-center py-5">
+            <p>My Profile</p>
+            <img
+              className="w-40"
+              src="studentDashboard/145857007_307ce493-b254-4b2d-8ba4-d12c080d6651.svg"
+              alt=""
+            />
+            <p>{userId}</p>
+            <button>Edit Profile</button>
           </div>
-          <div className="h-72 w-full bg-white rounded-2xl shadow-lg shadow-gray-200">
-            my learning path
+          <div className="h-72 w-4/5 bg-white rounded-2xl shadow-lg shadow-gray-200">
+            side bar
           </div>
         </div>
-
+        <div className="h-72 w-full bg-white rounded-2xl shadow-lg shadow-gray-200">
+          my learning path
+        </div>
+      </div>
     </>
   );
 }

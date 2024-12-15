@@ -23,7 +23,7 @@ const StuDashNavBar = () => {
           className="text-xl tracking-wider flex flex-row gap-2 hover:text-green-500"
         >
           <img
-            className="w-8"
+            className="w-8 "
             src="/studentDashboard/dashboard-svgrepo-com.svg"
             alt=""
           />

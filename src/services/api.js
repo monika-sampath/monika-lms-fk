@@ -14,6 +14,11 @@ API.interceptors.request.use((req) => {
 
 export const registerUser = (userData) => API.post("/auth/register", userData);
 export const loginUser = (userData) => API.post("/auth/login", userData);
+
+// code to get profile details
+export const profileDetail = (userData) => API.get("/profile", userData);
+
+
 // export const getTutors = () => API.get("/tutors");
 export const scheduleLesson = (lessonData) =>
   API.post("/lessons/schedule", lessonData);
@@ -28,7 +33,7 @@ export const getTutors = async () => {
         "Content-Type": "application/json",
       },
     });
-    console.log(response);
+    console.log("api.js",response);
     return response.data;
   } catch (error) {
     console.error("Error fetching tutors:", error);

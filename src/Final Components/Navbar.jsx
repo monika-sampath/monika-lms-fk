@@ -22,7 +22,9 @@ return (
       </div>
       <div className="flex flex-row gap-x-8">
         <button
-          onClick={() => handleScroll("1")} className="text-lg hover:font-semibold hover:text-green-500">
+          onClick={() => handleScroll("1")}
+          className="text-lg hover:font-semibold hover:text-green-500"
+        >
           Home
         </button>
         <button
@@ -32,7 +34,9 @@ return (
           Courses
         </button>
         <button
-          onClick={() => handleScroll("3")} className="text-lg hover:font-semibold hover:text-green-500">
+          onClick={() => handleScroll("3")}
+          className="text-lg hover:font-semibold hover:text-green-500"
+        >
           About
         </button>
         <button
@@ -41,7 +45,10 @@ return (
         >
           Reviews
         </button>
-        <Link to="/login"  className="text-lg ">
+        <Link
+          to="/login"
+          className="text-lg hover:font-semibold hover:text-green-500"
+        >
           Login
         </Link>
       </div>

@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 
 const Login = () => {
   const navigate = useNavigate(); // Initialize the navigate hook
+  const [userId, setUserId] = useState(null);
   const [formData, setFormData] = useState({
     email: "",
     password: "",
@@ -25,10 +26,11 @@ const Login = () => {
       const { token, user } = response.data;
       if (token) {
         localStorage.setItem("token", token); // Store the token in localStorage
+        setUserId(user.username);
         alert("Login successful!");
         console.log({ token, user });
         if (user.role == "student") {
-          navigate("/studentDashboard");
+          navigate("/studentDashboard", { state: { userId: user.username } });
         } else {
           navigate("/tutorDashboard");
         }

@@ -4,7 +4,10 @@ import { Link } from "react-router-dom";
 const Home = () => {
   return (
     <>
-      <div id="1" className="flex flex-row justify-evenly tracking-wide pb-20 pt-28">
+      <div
+        id="1"
+        className="flex flex-row justify-evenly tracking-wide pb-20 pt-28"
+      >
         <div className="w-1/2 pt-14 pl-24">
           <p className="text-5xl leading-tight pr-5">
             <span className="font-bold text-5xl">BUILD, MANAGE & SCALE </span>
@@ -17,7 +20,7 @@ const Home = () => {
           <div className="pt-9 flex flex-row gap-5">
             <Link
               to="/login"
-              className="transition ease-in-out delay-150 bg-blue-600 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-600 duration-300 text-4xl border-2 px-4 py-2 rounded-xl  text-white hover:ring-2 ring-green-500  hover:shadow-xl hover:shadow-green-100"
+              className="transition ease-in-out delay-150 bg-blue-600 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-600 duration-300 text-4xl border-2 px-4 py-2 rounded-xl  text-white hover:ring-2 ring-indigo-500  hover:shadow-xl hover:shadow-green-100"
             >
               Login
             </Link>
@@ -30,19 +33,15 @@ const Home = () => {
           </div>
         </div>
 
-        <div className=" h-96 rounded-lg w-1/2">
-          <img
-            className="w-full "
-            src="/Home/10613101_10088.svg"
-            alt=""
-          />
+        <div className=" h-96 rounded-lg w-1/2 pr-5">
+          <img className="w-full" src="/Home/10613101_10088.svg" alt="" />
           <p className="relative bottom-9 pl-14 text-5xl font-semibold">
             Learning Management System
           </p>
         </div>
       </div>
-      <div className="h-64 bg-gray-50 rounded-lg flex flex-col items-center justify-center gap-10">
-        <h3 className="text-2xl font-semibold">We are proud of...</h3>
+      <div className="py-16 bg-gray-50 rounded-lg flex flex-col items-center justify-center gap-10">
+        <h3 className="text-4xl font-semibold">We are proud of...</h3>
         <div className="flex flex-row gap-x-16">
           <div className="flex flex-col bg-white w-52 h-24 rounded-xl justify-center items-center shadow-md">
             <p className="text-green-500 font-medium text-2xl">325872</p>
@@ -65,14 +64,14 @@ const Home = () => {
       <div className="h-96 bg-white" id="2" title="Courses">
         Courses
       </div>
-      <div className="h-72 relative bg-sky-950 rounded-2xl flex flex-col justify-center items-start pl-44 gap-7">
+      <div className="h-72 relative bg-indigo-950 rounded-2xl flex flex-col justify-center items-start pl-44 gap-7">
         <p className="text-4xl font-medium text-red-300 tracking-wider">
           Kickstart your career
         </p>
         <p className="text-4xl font-medium text-red-300 tracking-wider">
           Get certified by completing a course
         </p>
-        <button className="text-white bg-green-500 px-4 py-2 text-xl rounded-2xl">
+        <button className="text-white bg-green-500 px-4 py-2 text-xl rounded-2xl hover:ring-4 hover:ring-offset-4 hover:ring-green-500">
           Get Started
         </button>
         <div className="bg-green-500 w-44 h-44 border-red-300 border-4 text-5xl font-bold absolute rounded-full text-white content-center text-center right-44 top-48">
@@ -86,7 +85,7 @@ const Home = () => {
       </div>
       <div
         id="3"
-        className="py-20 bg-gray-100 flex flex-col items-center px-28 rounded-2xl gap-5"
+        className="py-20 bg-gray-50 flex flex-col items-center px-28 rounded-2xl gap-5"
       >
         <h1 className="text-5xl font-semibold py-5">About us...</h1>
         <p className="text-center text-xl tracking-wide">
@@ -117,22 +116,134 @@ const Home = () => {
       </div>
       <div
         id="4"
-        className="h-96 bg-sky-950 text-white items-center text-center"
+        className=" bg-indigo-950 text-white items-center text-center"
       >
-        Feed back
-      </div>
-      <div className="bg-gray-200 py-20 flex flex-row justify-around">
-        <div>
-          <p>Social Links</p>
-          <p>youtube</p>
-          <p>instagram</p>
-          <p>github</p>
+        <div className=" flex flex-row items-center text-center">
+          <div className="w-1/2">
+            <img className="pl-16" src="Home/13961232_5385894.svg" alt="" />
+          </div>
+          <div className="w-1/2 flex flex-col gap-10">
+            <p className="text-5xl pr-16 leading-tight">
+              Our Students Are{" "}
+              <span className="text-blue-500">Our Strength</span> See What They
+              Say About Us
+            </p>
+            <p className="text-xl text-left pr-10">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi,
+              nemo quas expedita maiores ullam corrupti ad dolorum mollitia
+              voluptate totam eius id, provident fugiat dolorem tenetur neque
+              vero! Asperiores, nesciunt. Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Quasi, nemo quas expedita maiores ullam corrupti
+              ad dolorum mollitia voluptate totam eius id, provident fugiat
+              dolorem tenetur neque vero! Asperiores, nesciunt.
+            </p>
+          </div>
         </div>
+        <div className="grid grid-cols-2 px-8 gap-x-8 gap-y-8 py-8">
+          <div className="bg-indigo-800 rounded-2xl flex flex-col px-8 py-5 gap-y-3">
+            <div className="flex flex-row gap-5">
+              <img
+                className="w-10 bg-white rounded-full"
+                src="Home/370751043_e67eb556-f125-4e24-95ad-8aff21b9926a.svg"
+                alt=""
+              />
+              <div className="flex flex-col">
+                <p className="text-left text-lg">Aniruth</p>
+                <p>Student | Cambrige University</p>
+              </div>
+            </div>
+            <p className="text-left text-lg">
+              "You have established a positive classroom atmosphere". "Your use
+              of multimedia resources effectively enhances lessons". "Your
+              lessons are well-structured". "Your unwavering commitment to
+              providing the best for our students is truly commendable. Thank
+              you for putting in the extra effort during this busy time. The
+              client truly appreciates it and your positive attitude has helped
+              us all stay motivated."
+            </p>
+          </div>
+          <div className="bg-indigo-800 rounded-2xl flex flex-col px-8 py-5 gap-y-3">
+            <div className="flex flex-row gap-5">
+              <img
+                className="w-10 bg-white rounded-full"
+                src="Home/370751043_e67eb556-f125-4e24-95ad-8aff21b9926a.svg"
+                alt=""
+              />
+              <div className="flex flex-col">
+                <p className="text-left text-lg">Aniruth</p>
+                <p>Student | Cambrige University</p>
+              </div>
+            </div>
+            <p className="text-left text-lg">
+              "You have established a positive classroom atmosphere". "Your use
+              of multimedia resources effectively enhances lessons". "Your
+              lessons are well-structured". "Your unwavering commitment to
+              providing the best for our students is truly commendable. Thank
+              you for putting in the extra effort during this busy time. The
+              client truly appreciates it and your positive attitude has helped
+              us all stay motivated."
+            </p>
+          </div>
+          <div className="bg-indigo-800 rounded-2xl flex flex-col px-8 py-5 gap-y-3">
+            <div className="flex flex-row gap-5">
+              <img
+                className="w-10 bg-white rounded-full"
+                src="Home/370751043_e67eb556-f125-4e24-95ad-8aff21b9926a.svg"
+                alt=""
+              />
+              <div className="flex flex-col">
+                <p className="text-left text-lg">Aniruth</p>
+                <p>Student | Cambrige University</p>
+              </div>
+            </div>
+            <p className="text-left text-lg">
+              "You have established a positive classroom atmosphere". "Your use
+              of multimedia resources effectively enhances lessons". "Your
+              lessons are well-structured". "Your unwavering commitment to
+              providing the best for our students is truly commendable. Thank
+              you for putting in the extra effort during this busy time. The
+              client truly appreciates it and your positive attitude has helped
+              us all stay motivated."
+            </p>
+          </div>
+          <div className="bg-indigo-800 rounded-2xl flex flex-col px-8 py-5 gap-y-3">
+            <div className="flex flex-row gap-5">
+              <img
+                className="w-10 bg-white rounded-full"
+                src="Home/370751043_e67eb556-f125-4e24-95ad-8aff21b9926a.svg"
+                alt=""
+              />
+              <div className="flex flex-col">
+                <p className="text-left text-lg">Aniruth</p>
+                <p>Student | Cambrige University</p>
+              </div>
+            </div>
+            <p className="text-left text-lg">
+              "You have established a positive classroom atmosphere". "Your use
+              of multimedia resources effectively enhances lessons". "Your
+              lessons are well-structured". "Your unwavering commitment to
+              providing the best for our students is truly commendable. Thank
+              you for putting in the extra effort during this busy time. The
+              client truly appreciates it and your positive attitude has helped
+              us all stay motivated."
+            </p>
+          </div>
+        </div>
+      </div>
+      <div className="bg-gray-50 py-5 flex flex-col justify-around gap-y-16">
         <div>
-          <p>Contact Info</p>
-          <p>Call Us : +92759937778</p>
-          <p>Address: no.8,akkwjdjecm,Los Angeles, 623114</p>
-          <p>Mail Us:sample@elearning.com</p>
+          <p className="text-center font-bold text-xl">Contact Info</p>
+          <p className="text-center">Call Us : +92759937778</p>
+          <p className="text-center">
+            Address: no.8,akkwjdjecm,Los Angeles, 623114
+          </p>
+          <p className="text-center">Mail Us:sample@elearning.com</p>
+        </div>
+        <div className="flex flex-row justify-center gap-x-4">
+          <p className="text-xl font-bold">Social Links</p>
+          <p className="text-xl font-bold">youtube</p>
+          <p className="text-xl font-bold">instagram</p>
+          <p className="text-xl font-bold">github</p>
         </div>
       </div>
     </>
