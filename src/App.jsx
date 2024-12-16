@@ -4,13 +4,14 @@ import Navbar from "./Final Components/Navbar";
 import Register from "./Final Pages/Register";
 import Login from "./Final Pages/Login";
 import Dashboard from "./pages/Dashboard";
-import ScheduleLesson from "./pages/ScheduleLesson";
+
 import FrontPage from "./Final Pages/FrontPage";
 import StudentDashboard from "./Final Components/StudentDashboard";
 import TutorDashboard from "./Final Pages/TutorDashboard";
 import StuFPage from "./Final Pages/StuFPage";
 import MyLearnPath from "./Final Pages/MyLearnPath";
 import TutorDetails from "./Final Pages/TutorDetails";
+import ScheduleLesson from "./Final Pages/ScheduleLesson";
 
 const App = () => {
   return (
@@ -27,6 +28,7 @@ const App = () => {
           element={<TutorDetails />}
         />
         <Route path="/tutorDashboard" element={<TutorDashboard />} />
+        <Route path="/turortDashboard/scheduleLesson" element={<ScheduleLesson/>} />
         <Route path="/schedule/:tutorId" element={<ScheduleLesson />} />
       </Routes>
     </div>

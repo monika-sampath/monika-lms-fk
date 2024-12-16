@@ -44,7 +44,7 @@ const Login = () => {
 
   return (
     <div className="p-4 bg-blue-100 h-screen flex flex-col justify-center items-center">
-      <div className="bg-white h-3/4 w-3/4 rounded-2xl  flex flex-row divide-x-2 shadow-md">
+      <div className="bg-white h-3/4 w-3/4 flex flex-row divide-x-2 shadow-md">
         <div className="h-full w-1/2  flex justify-around ">
           <img
             className="w-3/5"
@@ -54,7 +54,7 @@ const Login = () => {
         </div>
         <form
           onSubmit={handleSubmit}
-          className=" p-6 rounded gap-5  h-full w-1/2 content-center flex flex-col justify-center items-center"
+          className=" p-6  gap-5  h-full w-1/2 content-center flex flex-col justify-center items-center"
         >
           <h2 className="text-2xl font-bold mb-6 text-center">Login</h2>
           <label className=" mb-4 w-4/5">

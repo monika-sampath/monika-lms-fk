@@ -38,6 +38,7 @@ const TutorDetails = () => {
     <div className="flex flex-row">
       <StuDashNavBar />
       <div className="bg-blue-50 w-5/6 h-screen rounded-r-lg flex flex-col justify-evenly px-14">
+        <div><p className="text-center font-semibold text-3xl">Expand Your Career <span className="text-blue-500">Opportunity</span> With Help of Our Tutors</p></div>
         <div className="overflow-x-auto p-4">
           <table className="min-w-full bg-white border border-gray-200">
             <thead>

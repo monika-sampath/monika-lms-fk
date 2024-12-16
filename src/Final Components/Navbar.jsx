@@ -11,7 +11,7 @@ const Navbar = () => {
      };
 return (
   <>
-    <nav className="bg-gray-50 h-28 fixed w-screen shadow-lg shadow-gray-400 rounded-lg flex flex-row items-center justify-between px-20">
+    <nav className="bg-gray-50 h-28  w-screen shadow-lg shadow-blue-100 rounded-lg flex flex-row items-center justify-between px-20">
       <div className="flex flex-row items-center">
         <img
           src="/NavBar/book-courses-education-learning-school-study-svgrepo-com.svg"
