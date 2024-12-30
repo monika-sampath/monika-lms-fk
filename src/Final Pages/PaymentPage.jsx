@@ -3,6 +3,7 @@ import { useLocation } from "react-router-dom";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
+const BACKEND_BASE_URL = "https://monika-lms-bk.onrender.com/api";
 const PaymentPage = () => {
   const navigate = useNavigate(); // Initialize the navigate hook
   const location = useLocation();
@@ -74,12 +75,15 @@ const PaymentPage = () => {
       //   currency: "INR",
       // Base URL of your backend
 
-      const { data } = await axios.post(`/api/razorpay/create-order`, {
-        //method: "POST",
-        //mode: "no-cors", // This bypasses CORS but limits functionality
-        amount: 50000, // Amount in smallest currency unit (e.g., 50000 = ₹500)
-        currency: "INR",
-      });
+      const { data } = await axios.post(
+        `${BACKEND_BASE_URL}/razorpay/create-order`,
+        {
+          //method: "POST",
+          //mode: "no-cors", // This bypasses CORS but limits functionality
+          amount: 50000, // Amount in smallest currency unit (e.g., 50000 = ₹500)
+          currency: "INR",
+        }
+      );
 
       const { id: order_id, amount, currency } = data;
 
@@ -100,7 +104,7 @@ const PaymentPage = () => {
           handler: async function (response) {
             // Send the payment response to the backend for verification
             const paymentResult = await axios.post(
-              "/api/razorpay/verify-payment",
+              `${BACKEND_BASE_URL}/razorpay/verify-payment`,
               {
                 razorpay_order_id: response.razorpay_order_id,
                 razorpay_payment_id: response.razorpay_payment_id,
