@@ -58,8 +58,9 @@ const PaymentPage = () => {
         setLoading(false);
       }
     };
-
-    fetchData();
+    if (courseIds) {
+      fetchData();
+    }
   }, [courseIds]);
 
   //     const handlePayment = () => {
@@ -71,10 +72,11 @@ const PaymentPage = () => {
       // const { data } = await axios.post("/api/razorpay/create-order", {
       //   amount: 50000, // Amount in smallest currency unit (e.g., 50000 = ₹500)
       //   currency: "INR",
+      // Base URL of your backend
 
-      const { data } = await axios.post("/api/razorpay/create-order", {
-        method: "POST",
-        mode: "no-cors", // This bypasses CORS but limits functionality
+      const { data } = await axios.post(`/api/razorpay/create-order`, {
+        //method: "POST",
+        //mode: "no-cors", // This bypasses CORS but limits functionality
         amount: 50000, // Amount in smallest currency unit (e.g., 50000 = ₹500)
         currency: "INR",
       });
