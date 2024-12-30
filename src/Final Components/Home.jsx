@@ -243,7 +243,7 @@ const Home = () => {
         </div>
         <img
           className="w-96 absolute left-1/2 color top-20 invert"
-          src="public/Home/rb_4667.png"
+          src="/Home/rb_4667.png"
           alt=""
         />
       </div>

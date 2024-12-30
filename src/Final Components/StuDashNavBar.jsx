@@ -41,13 +41,26 @@ const StuDashNavBar = () => {
           My Learning
         </Link>
         <Link
-          to="/studentDashboard/tutorDetails" className="text-xl tracking-wider flex flex-row gap-2 hover:text-green-500">
+          to="/studentDashboard/tutorDetails"
+          className="text-xl tracking-wider flex flex-row gap-2 hover:text-green-500"
+        >
           <img
             className="w-8"
             src="/studentDashboard/teacher-pointing-at-blackboard-svgrepo-com.svg"
             alt=""
           />
           Tutors Details
+        </Link>
+        <Link
+          to="/studentDashboard/coursesDashboard"
+          className="text-xl tracking-wider flex flex-row text-left gap-2 hover:text-green-500"
+        >
+          <img
+            className="w-8"
+            src="/studentDashboard/i-exam-multiple-choice-svgrepo-com.svg"
+            alt=""
+          />
+          Courses
         </Link>
         <button className="text-xl tracking-wider flex flex-row gap-2 hover:text-green-500">
           <img

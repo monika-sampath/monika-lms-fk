@@ -28,7 +28,7 @@ const TutorDashNavBar = () => {
           Schedule Lesson
         </Link>
         <Link
-          to=""
+          to="/turortDashboard/createCourses"
           className="text-xl tracking-wider flex flex-row gap-2 hover:text-green-500"
         >
           <img
@@ -36,7 +36,7 @@ const TutorDashNavBar = () => {
             src="/studentDashboard/teacher-pointing-at-blackboard-svgrepo-com.svg"
             alt=""
           />
-          Student Details
+          Create Courses
         </Link>
         <button className="text-xl tracking-wider flex flex-row gap-2 hover:text-green-500">
           <img

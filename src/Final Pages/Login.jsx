@@ -31,8 +31,10 @@ const Login = () => {
         console.log({ token, user });
         if (user.role == "student") {
           navigate("/studentDashboard", { state: { userId: user.username } });
+        } else if (user.role == "tutor") {
+          navigate("/tutorDashboard", { state: { userId: user.username } });
         } else {
-          navigate("/tutorDashboard");
+          navigate("/adminDashboard");
         }
         // Redirect to Dashboard after successful login
       }
