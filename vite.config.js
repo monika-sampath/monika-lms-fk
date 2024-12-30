@@ -6,7 +6,9 @@ export default defineConfig({
   server: {
     proxy: {
       "/api": {
-        target: "https://monika-lms-bk.onrender.com",
+        target:
+          "https://monika-lms-bk.onrender.com" ||
+          "https://monika-lms-frnt-end.netlify.app",
         changeOrigin: true,
         secure: false,
       },
