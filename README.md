@@ -76,3 +76,11 @@ TailwindCSS for styling
 Zoom API or anything related
 razorpay
 
+Admin user :
+
+{
+
+"email":"lms_admin@example.com",
+"password":"lms_admin_8765"
+
+}

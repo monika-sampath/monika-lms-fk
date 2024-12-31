@@ -18,6 +18,7 @@ import CartPage from "./Final Pages/CartPage";
 import PaymentPage from "./Final Pages/PaymentPage";
 import CartPageTutor from "./Final Pages/CartPageTutor";
 import CreateCourses from "./Final Pages/CreateCourses";
+import AdminDashboardPage from "./Final Pages/AdminDashboard";
 
 const App = () => {
   const [cart, setCart] = useState([]);
@@ -92,7 +93,7 @@ const App = () => {
         />
         <Route path="/schedule/:tutorId" element={<ScheduleLesson />} />
 
-        <Route path="/adminDashboard" element={<AdminDashboard />} />
+        <Route path="/adminDashboard" element={<AdminDashboardPage />} />
 
         <Route path="/cartTutor" element={<CartPageTutor />} />
       </Routes>
