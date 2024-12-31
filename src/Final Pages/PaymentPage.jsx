@@ -46,7 +46,9 @@ const PaymentPage = () => {
         let response;
         console.log("CourseIds:", courseIds);
         if (courseIds) {
-          response = await axios.get(`/api/courses/${courseIds}`);
+          response = await axios.get(
+            `${BACKEND_BASE_URL}/courses/${courseIds}`
+          );
         }
         // } else {
         //   response = await axios.get(`/api/schedule/${tutorName}`);
